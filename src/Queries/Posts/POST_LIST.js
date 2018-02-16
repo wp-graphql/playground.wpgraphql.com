@@ -6,6 +6,7 @@ const POST_LIST_QUERY = `
         id
         title
         date
+        excerpt
       }
     }
   }
