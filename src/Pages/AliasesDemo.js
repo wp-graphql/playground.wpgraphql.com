@@ -49,7 +49,28 @@ class AliasesDemo extends Component {
     if ( data ) {
       return (
         <div>
+          <Row gutter={16}>
+            <h2>Query</h2>
+            <SyntaxHighlighter
+              language='php'
+              style={style}
+              showLineNumbers
 
+            >
+              {QUERIES.POST_AND_CATEGORIES_WITH_ALIASES}
+            </SyntaxHighlighter>
+          </Row>
+          <Row gutter={16}>
+            <h2>React Component</h2>
+            <SyntaxHighlighter
+              language='php'
+              style={style}
+              showLineNumbers
+
+            >
+              {CODE}
+            </SyntaxHighlighter>
+          </Row>
 
           <Row gutter={16}>
             <h2>Rendered List</h2>
@@ -88,29 +109,6 @@ class AliasesDemo extends Component {
                 </Card>
               )}
             </Col>
-          </Row>
-
-          <Row gutter={16}>
-            <h2>Query</h2>
-            <SyntaxHighlighter
-              language='php'
-              style={style}
-              showLineNumbers
-
-            >
-              {QUERIES.POST_AND_CATEGORIES_WITH_ALIASES}
-            </SyntaxHighlighter>
-          </Row>
-          <Row gutter={16}>
-            <h2>React Component</h2>
-            <SyntaxHighlighter
-              language='php'
-              style={style}
-              showLineNumbers
-
-            >
-              {CODE}
-            </SyntaxHighlighter>
           </Row>
 
         </div>

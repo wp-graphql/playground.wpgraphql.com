@@ -50,25 +50,6 @@ class BooksDemo extends Component {
       return (
         <div>
           <Row gutter={16}>
-            <h3>Books</h3>
-            { data && data.books && data.books.edges.map( (book) =>
-              <Col key={book.node.id} span={12}>
-                <Card
-                  hoverable
-                  cover={<img alt="example" src={book.node.featuredImage.sourceUrl} />}
-                  extra={<Tag color="magenta">{'$' + book.node.price}</Tag>}
-                  title={book.node.title}
-                >
-                  <Meta
-                    title={book.node.title}
-                    description={'Genres: ' + book.node.genres}
-                    avatar={<Avatar src={book.node.author.avatar.url} />}
-                  />
-                </Card>
-              </Col>
-            )}
-          </Row>
-          <Row gutter={16}>
             <h2>Query</h2>
             <SyntaxHighlighter
               language='php'
@@ -90,6 +71,27 @@ class BooksDemo extends Component {
               {CODE}
             </SyntaxHighlighter>
           </Row>
+
+          <Row gutter={16}>
+              <h3>Books</h3>
+              { data && data.books && data.books.edges.map( (book) =>
+                <Col key={book.node.id} span={12}>
+                  <Card
+                    hoverable
+                    cover={<img alt="example" src={book.node.featuredImage.sourceUrl} />}
+                    extra={<Tag color="magenta">{'$' + book.node.price}</Tag>}
+                    title={book.node.title}
+                  >
+                    <Meta
+                      title={book.node.title}
+                      description={'Genres: ' + book.node.genres}
+                      avatar={<Avatar src={book.node.author.avatar.url} />}
+                    />
+                  </Card>
+                </Col>
+              )}
+          </Row>
+
         </div>
       )
     } else {
