@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu, Icon } from 'antd'
 import GraphiQL from 'graphiql'
 import fetch from 'isomorphic-fetch'
 import styled from 'styled-components'
 import './App.css'
 import QUERIES from './Queries'
 import CustomPostTypeSupport from './Pages/CustomPostTypeSupport'
-import AliasesDemo from './Pages/AliasesDemo';
-import BooksDemo from './Pages/BooksDemo';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-const { Content, Sider} = Layout;
+import AliasesDemo from './Pages/AliasesDemo'
+import BooksDemo from './Pages/BooksDemo'
+import { HashRouter as Router, Route } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
+const { Content, Sider} = Layout
 const { SubMenu } = Menu;
 
 class App extends Component {
