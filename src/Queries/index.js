@@ -293,7 +293,7 @@ query GetPosts($first:Int) {
 `;
 
 const POST_LIST_WITH_MANY_VARIABLES = `
-query GetPosts($first:Int $last:Int $after: String $before:String $where:RootPostsQueryArgs) {
+query GetPosts($first:Int $last:Int $after: String $before:String $where:RootQueryToPostConnectionWhereArgs) {
   posts( first:$first last:$last after:$after before:$before where:$where ) {
     pageInfo {
       hasNextPage
@@ -318,7 +318,7 @@ query GetPosts(
     $last:Int 
     $after: String 
     $before:String 
-    $where:RootPostsQueryArgs 
+    $where:RootQueryToPostConnectionWhereArgs 
     $includeField:Boolean!
   ) {
   posts( 
