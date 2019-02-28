@@ -349,7 +349,7 @@ const HELLO_WORLD = `
 {
   generalSettings{
     title
-    url
+    description
 		language
   }
 }
